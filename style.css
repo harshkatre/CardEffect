@@ -17,67 +17,125 @@ body{
      display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    gap: 100px;
 }
 
 
 div{
   max-width: 300px;
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding-inline: 10px;
-   gap: 10px; 
-   border-radius: 15px;
-   padding-bottom: 10px;
-   background: linear-gradient(black)padding-box,
-            conic-gradient(from var(--rotate),black,black,black,rgb(0, 255, 242),black)border-box;
-    border: 10px solid rgba(255, 255, 255, 0);
-    animation: bg 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
-    border-width: 0px;
-   transition: all 0.1s ease;
-   box-shadow: 0px 0px 0px rgb(0, 255, 242);
-   color: white;
-   text-shadow: 0 0 0px orangered;
+  gap: 10px; 
+  border-radius: 15px;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
 }
 
-div:hover{
-    color:  rgb(0, 255, 242);
-    animation-play-state: running;
-    border-width: 7px;
-   box-shadow: 0 0 50px rgb(0, 255, 242);
-   text-shadow: 0 0 20px rgb(0, 255, 242);
 
+.goku:hover{
+  color:  rgb(0, 255, 242);
+  animation-play-state: running;
+  border-width: 7px;
+  box-shadow: 0 0 50px rgb(0, 255, 242);
+  text-shadow: 0 0 20px rgb(0, 255, 242);
+}
+.goku2:hover{
+  color:  rgb(255, 0, 0);
+  animation-play-state: running;
+  border-width: 7px;
+  box-shadow: 0 0 50px rgb(255, 0, 0);
+  text-shadow: 0 0 20px rgb(255, 0, 0);
+}
+.goku3:hover{
+  color:  rgb(255, 0, 157);
+  animation-play-state: running;
+  border-width: 7px;
+  box-shadow: 0 0 50px rgb(255, 0, 157);
+  text-shadow: 0 0 20px rgb(255, 0, 157);
 }
 @property --rotate{
-    syntax:"<angle>";
-    initial-value:0deg;
-    inherits: false;
+  syntax:"<angle>";
+  initial-value:0deg;
+  inherits: false;
 }
 @keyframes bg{
-    form{
-     --rotate:0deg;
-    }
+  form{
+    --rotate:0deg;
+  }
     to{
-     --rotate:360deg;
+      --rotate:360deg;
     }
-}
-
-div h3{
-  font-size: 2rem;
+  }
+  
+ div h3{
+    font-size: 2rem;
 }
 div p{
-    text-align: center;
+  text-align: center;
 }
 
 div img{
   width: 100%;
-  /* transition: all 10s ease; */
+   height: 550px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
 }
 img:hover{
-   background:radial-gradient(130px ,orangered,black)content-box;
+  background:radial-gradient(130px ,rgb(255, 136, 0),black)content-box;
+  /* scale: 0.9; */
+}
+
+
+
+
+.goku{
+  background: linear-gradient(black)padding-box,
+  conic-gradient(from var(--rotate),black,black,black,rgb(0, 255, 242),black)border-box;
+  border: 10px solid rgba(255, 255, 255, 0);
+  animation: bg 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  border-width: 0px;
+  transition: all 0.1s ease;
+  box-shadow: 0px 0px 0px rgb(0, 255, 242);
+  color: white;
+  text-shadow: 0 0 0px orangered; 
+}
+
+.goku2{
+   background: linear-gradient(black)padding-box,
+  conic-gradient(from var(--rotate),black,black,black,rgb(255, 0, 0),black)border-box;
+  border: 10px solid rgba(255, 255, 255, 0);
+  animation: bg 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  border-width: 0px;
+  gap: 30px;
+  transition: all 0.1s ease;
+  box-shadow: 0px 0px 0px rgb(255, 0, 0);
+  color: white;
+  text-shadow: 0 0 0px rgb(255, 0, 0);
+}
+
+.goku3{
+   background: linear-gradient(black)padding-box,
+  conic-gradient(from var(--rotate),black,black,black,rgb(255, 0, 157),black)border-box;
+  border: 10px solid rgba(255, 255, 255, 0);
+  animation: bg 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  border-width: 0px;
+  transition: all 0.1s ease;
+  box-shadow: 0px 0px 0px rgb(255, 0, 157);
+  color: white;
+  text-shadow: 0 0 0px rgb(255, 0, 157);
 }
